@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" onkeyup="modifyInput(this)" placeholder="Enter a number">
+    <br />
+    <button onclick="pop()">Pop</button>
+    <button onclick="push()">Push</button>
+    <button onclick="Display()">Display</button>
+    <span id="result"></span>
+    <script>
+        let numberArr = [];
+        let inputNumber;
+        let reult = document.getElementById('result');
+        function modifyInput(obj) {
+            inputNumber = parseFloat(obj.value);
+        }
+        function pop() {
+            if (numberArr.length > 0) {
+                numberArr.pop();
+            }
+        }
+        function push() {
+            numberArr.push(inputNumber);
+        }
+        function Display() {
+            result.innerText = numberArr.join(" - ");
+        }
+    </script>
+</body>
+
+</html>

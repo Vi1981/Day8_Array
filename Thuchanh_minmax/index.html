@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số min.max</title>
+</head>
+
+<body>
+    <script>
+        let matrix = [];
+        for (var k = 0; k < 100; k++) {
+            matrix[k] = Math.floor(Math.random() * 101);
+            document.write("<p>"+ matrix[k] + "  " + "</p>");
+        }
+
+        var min = matrix[0];
+        for (var i = 1; i < matrix.length; ++i) {
+            if (matrix[i] < min) {
+                min = matrix[i];
+            }
+        }
+
+        document.write("<br/>");
+        document.write("The minimum value is: " + min);
+
+        let max = matrix[0];
+        for (let j = 1; j < matrix.length; ++j) {
+            if (matrix[i] > max) {
+                max = matrix[i];
+            }
+              }
+
+        document.write("<br/>");
+        document.write("The maximum value is: " + max);
+    </script>
+
+</body>
+
+</html>
