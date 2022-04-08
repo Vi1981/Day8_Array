@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi chữ hoa thành chữ thường</title>
+</head>
+
+<body>
+
+    <script>
+        let inputStr = prompt("Nhập vào 1 chuỗi chữ");
+        let strArr = inputStr.split("");
+
+        for (let x = 0; x < strArr.length; x++) {
+            if (strArr[x] == strArr[x].toUpperCase()) {
+                strArr[x] = strArr[x].toLowerCase();
+            }
+            else {
+
+                strArr[x] = strArr[x].toUpperCase();
+            }
+        }
+        inputStr = strArr.join("  ")
+        document.write(inputStr);
+    </script>
+</body>
+
+</html>

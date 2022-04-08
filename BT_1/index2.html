@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm gạch giữa vào số chẵn</title>
+</head>
+
+<body>
+    <script>
+       
+        let inputStr = prompt("Nhập vào 1 dãy số");
+        let strArr = inputStr.split("");
+        for (let x = 1; x <= strArr.length; x++) {
+            if (strArr[x - 1] % 2 == 0) {
+                if (strArr[x] % 2 == 0) {
+                    strArr.splice(x, 0, " - ");
+                }
+            }
+            inputStr = strArr.join(" ")
+        }
+        document.write(inputStr);
+    </script>
+</body>
+
+</html>

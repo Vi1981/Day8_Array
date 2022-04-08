@@ -13,7 +13,7 @@
         let matrix = [];
         for (var k = 0; k < 100; k++) {
             matrix[k] = Math.floor(Math.random() * 101);
-            document.write("<p>"+ matrix[k] + "  " + "</p>");
+            document.write( matrix[k] + "  " );
         }
 
         var min = matrix[0];
@@ -28,8 +28,8 @@
 
         let max = matrix[0];
         for (let j = 1; j < matrix.length; ++j) {
-            if (matrix[i] > max) {
-                max = matrix[i];
+            if (matrix[j] > max) {
+                max = matrix[j];
             }
               }
 
